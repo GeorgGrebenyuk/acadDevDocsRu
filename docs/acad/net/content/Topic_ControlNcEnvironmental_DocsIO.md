@@ -1,0 +1,1 @@
+Работа с файлами документов осуществляется через методы классов DocumentCollection, Document, и Database.
