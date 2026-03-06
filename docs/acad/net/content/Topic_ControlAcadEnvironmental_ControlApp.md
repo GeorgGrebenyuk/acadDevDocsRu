@@ -1,19 +1,19 @@
-# Взаимодействие с окном приложения nanoCAD
+# Взаимодействие с окном приложения AutoCAD
 
-Иногда исполняемому приложению бывает необходимо свернуть окно nanoCAD или запросить его состояние. Для этого используются методы статического класса Application. С их помощью можно изменять положение, размер и видимость окна приложения, также можно использовать свойство WindowState для получения и задания текущего состояния окна приложения. 
-<b>Примечание</b>: Следующие примеры требуют наличия в проекте ссылки на библиотеку PresentationCore (PresentationCore.dll). Воспользуйтесь диалоговым окном Add Reference и выберите PresentationCore на вкладке .NET (при использовании .NET Framework). При использовании .NET6 в свойствах проекта csproj внесите строку UseWPF = True. Некоторые примеры также требуют ссылки на библиотеки WindowsForms, добавьте в проект на .NET6+ UseWindowsForms = True. 
+Иногда исполняемому приложению бывает необходимо свернуть окно AutoCAD или запросить его состояние. Для этого используются методы статического класса Application. С их помощью можно изменять положение, размер и видимость окна приложения, также можно использовать свойство WindowState для получения и задания текущего состояния окна приложения. 
+**Примечание**: Следующие примеры требуют наличия в проекте ссылки на библиотеку PresentationCore (PresentationCore.dll). Воспользуйтесь диалоговым окном Add Reference и выберите PresentationCore на вкладке .NET (при использовании .NET Framework). При использовании .NET6 в свойствах проекта csproj внесите строку UseWPF = True. Некоторые примеры также требуют ссылки на библиотеки WindowsForms, добавьте в проект на .NET6+ UseWindowsForms = True. 
 
-```cs
-  \<PropertyGroup\>
-    \<TargetFramework\>net6.0-windows\</TargetFramework\>
-    \<UseWPF\>true\</UseWPF\>
-    \<UseWindowsForms\>true\</UseWindowsForms\>
-  \</PropertyGroup\>
-
+```xml
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWP>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
 ```
-##  Установка положения и размера окна приложения  
-Свойства Application.MainWindow.DeviceIndependentLocation, Application.MainWindow.DeviceIndependentSize в текущей версии .NET API не доступны для редактирования (в отличие от AutoCAD .NET API). ##  Разворачивание на полный экран и свертывание приложения  
 
+## Установка положения и размера окна приложения
+
+Свойства Application.MainWindow.DeviceIndependentLocation, Application.MainWindow.DeviceIndependentSize в текущей версии .NET API не доступны для редактирования (в отличие от AutoCAD .NET API). ##  Разворачивание на полный экран и свертывание приложения  
 
 ```cs
 using HostMgd.Windows;
@@ -33,9 +33,10 @@ public static void MinMaxApplicationWindow()
     Application.MainWindow.WindowState = Window.State.Maximized;
     System.Windows.Forms.MessageBox.Show("Maximized", "MinMax");
 }
-
 ```
-##  Получение текущего состояния приложения  
+
+## Получение текущего состояния приложения
+
 Пример ниже получает текущее состояние окна приложения и выводит в консоль nanoCAD информацию: 
 
 ```cs
@@ -46,9 +47,10 @@ public static void CurrentWindowState()
                                             Application.MainWindow.WindowState.ToString(),
                                             "Window State");
 }
-
 ```
-##  Управление видимостью окна приложения  
+
+## Управление видимостью окна приложения
+
 Пример ниже использует свойство Visible для установки приложения сперва невидимым (скрытым), а затем снова видимым. 
 
 ```cs
@@ -62,6 +64,4 @@ public static void HideWindowState()
     Application.MainWindow.Visible = true;
     System.Windows.Forms.MessageBox.Show("Visible", "Show/Hide");
 }
-
 ```
- 

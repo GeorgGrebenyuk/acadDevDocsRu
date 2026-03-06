@@ -1,3 +1,5 @@
+# Редактирование типа линии
+
 ## Переименование типа линии
 
 Чтобы переименовать тип линии, используйте свойство Name. При переименовании типа линии вы переименовываете только определение типа линии в чертеже. Имя типа линия в файле LIN останется прежним. 
@@ -21,14 +23,14 @@
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
- 
+
 [CommandMethod("ChangeLinetypeDescription")]
 public static void ChangeLinetypeDescription()
 {
     // Get the current document and database
     Document acDoc = Application.DocumentManager.MdiActiveDocument;
     Database acCurDb = acDoc.Database;
- 
+
     // Start a transaction
     using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
     {
@@ -36,10 +38,10 @@ public static void ChangeLinetypeDescription()
         LinetypeTableRecord acLineTypTblRec;
         acLineTypTblRec = acTrans.GetObject(acCurDb.Celtype,
                                             OpenMode.ForWrite) as LinetypeTableRecord;
- 
+
         // Change the description of the current linetype
         acLineTypTblRec.AsciiDescription = "Exterior Wall";
- 
+
         // Save the changes and dispose of the transaction
         acTrans.Commit();
     }
@@ -57,7 +59,7 @@ using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
- 
+
 [CommandMethod("SetObjectLinetypeScale")]
 public static void SetObjectLinetypeScale()
 {
