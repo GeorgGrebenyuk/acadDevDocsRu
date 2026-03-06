@@ -2,32 +2,36 @@
 
 При разработке нового приложения (на поддерживаемых языках программирования) оно может выполняться как в основном процессе AutoCAD, так и вне процесса. Настоящее .NET API предназначено только для работы в одном процессе с AutoCAD; вместе с тем использование ActiveX Automation позволяет работать как в данном процессе, так и вне его. 
 
-Для создания нового процесса AutoCAD необходимо создать новый экземпляр приложения AutoCAD или обратиться к уже запущенному приложению помимо данного. После получения ссылки на запущенный экземпляр nanoCAD, при помощи ActiveX Automation производим загрузку в него целевой .NET-библиотеки с помощью метода SendCommand, который является членом документа nanoCAD, возвращаемым через свойство ActiveDocument приложения AcadApplication. 
+Для создания нового процесса AutoCAD необходимо создать новый экземпляр приложения AutoCAD или обратиться к уже запущенному приложению помимо данного. После получения ссылки на запущенный экземпляр AutoCAD, при помощи ActiveX Automation производим загрузку в него целевой .NET-библиотеки с помощью метода SendCommand, который является членом документа AutoCAD, возвращаемым через свойство ActiveDocument приложения AcadApplication. 
 
 Пример ниже иллюстрирует такой подход - к примеру, библиотека загружена в AutoCAD 2022 и вызывает новое окно (либо пытается подключиться к уже имеющемуся) для AutoCAD 2023. После загрузки, в новый документ загружается через консоль некая .NET-библиотека, которой подается команда с целевыми параметрами обработки. 
 
 ```cs
 using System;
-using Autodesk.AutoCAD.Runtime;
 using System.Runtime.InteropServices;
+
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.Interop;
+
 public class Loader
 {
     [CommandMethod("ConnectToNcad")]
     public static void ConnectToNcad()
     {
-        nanoCAD.Application acAppComObj = null;
-        const string strProgId = "nanoCAD.Application.25.0";
+        AcadApplication acAppComObj = null;
+        const string strProgId = "AutoCAD.Application.24.2";
         // Get a running instance of nanoCAD
         try
         {
-            acAppComObj = (AutoCAD.Application)Marshal.GetActiveObject(strProgId);
+            acAppComObj = (AcadApplication)Marshal.GetActiveObject(strProgId);
         }
         catch // An error occurs if no instance is running
         {
             try
             {
                 // Create a new instance of AutoCAD
-                acAppComObj = (AutoCAD.Application)Activator.CreateInstance(Type.GetTypeFromProgID(strProgId), true);
+                acAppComObj = (AcadApplication)Activator.CreateInstance(Type.GetTypeFromProgID(strProgId), true);
             }
             catch
             {
@@ -40,7 +44,7 @@ public class Loader
         acAppComObj.Visible = true;
         System.Windows.Forms.MessageBox.Show("Now running " + acAppComObj.Name + "version " + acAppComObj.Version);
         // Get the active document
-        AutoCAD.AcaCADDocument acDocComObj;
+        AcadDocument acDocComObj;
         acDocComObj = acAppComObj.ActiveDocument;
         // Optionally, load your assembly and start your command or if your assembly
         // is demandloaded, simply start the command of your in-process assembly.

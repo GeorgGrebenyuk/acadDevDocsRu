@@ -59,4 +59,4 @@ public static void ChangeLayoutPlotSettings()
 }
 ```
 
-<b>Примечание</b>: метод SetPlotConfigurationName, задающий листу определенный формат для данного устройства печати, в nanoCAD в некоторых случаях может выбрасывать ошибку eInvalidInput.
+**Примечание**: метод SetPlotConfigurationName, задающий листу определенный формат для данного устройства печати, в nanoCAD в некоторых случаях может выбрасывать ошибку eInvalidInput.

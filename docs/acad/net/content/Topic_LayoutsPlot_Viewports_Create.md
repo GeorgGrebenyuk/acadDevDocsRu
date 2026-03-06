@@ -73,7 +73,7 @@ public static void CreateFloatingViewport()
 }
 ```
 
-Примечание: аналогичная процедура acedSetCurrentVPort для nanoCAD будет выглядеть так:
+**Примечание**: аналогичная процедура acedSetCurrentVPort для nanoCAD будет выглядеть так:
 
 ```csharp
 [DllImport("NrxHostGate.dll", CallingConvention = CallingConvention.Cdecl,

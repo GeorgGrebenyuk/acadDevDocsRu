@@ -54,4 +54,4 @@ public void ErrorTryCatchFinally()
 
 ## Использование объекта Exception
 
-Перехватываемое в теле блока catch исключение описывается классом `Autodesk.AutoCAD.Runtime.Exception`, который является дочерним классом от System.Exception. Свойство `ErrorStatus` данного исключения вернет один из кодов ошибки, специфичной для nanoCAD, описываемых одноименным перечислением из того же пространства имен `Autodesk.AutoCAD.Runtime`.
+Перехватываемое в теле блока catch исключение описывается классом `Autodesk.AutoCAD.Runtime.Exception`, который является дочерним классом от System.Exception. Свойство `ErrorStatus` данного исключения вернет один из кодов ошибки, специфичной для AutoCAD, описываемых одноименным перечислением из того же пространства имен `Autodesk.AutoCAD.Runtime`.

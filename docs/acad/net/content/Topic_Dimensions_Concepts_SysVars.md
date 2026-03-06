@@ -7,4 +7,4 @@
 Autodesk.AutoCAD.ApplicationServices.Application.SetSystemVariable("DIMAUNIT", 3);
 ```
 
-****Примечание****: переменная DIMFIT в nanoCAD не реализована. 
+**Примечание**: переменная DIMFIT в nanoCAD не реализована. 

@@ -48,7 +48,7 @@
 
 * TextRotation : поворот текста размера в радианах; 
 
-**Примечание**: имевшиеся в nanoCAD .NET API свойства Dimtoh, TextPrecision не реализованы; 
+**Примечание**: в nanoCAD .NET API свойства Dimtoh, TextPrecision не реализованы; 
 
 ## Добавление суффикса для линейного размера
 

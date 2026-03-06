@@ -16,9 +16,9 @@
 * DocumentToBeDeactivated : Событие, возникающее перед тем, как фокус переходит на иной dwg-документ . Соответствует функции ObjectARX API `AcApDocManagerReactor.documentToBeDeactivated()`;
 * DocumentToBeDestroyed : Событие, возникающее перед уничтожением документа. Событие, возникающее перед уничтожением документа. Соответствует функции ObjectARX API `AcApDocManagerReactor.documentToBeDestroyed()`; 
 
-<b>Примечание</b>: в nanoCAD .NET API не реализовано событие DocumentToBeDeactivated 
+**Примечание**: в nanoCAD .NET API не реализовано событие DocumentToBeDeactivated 
 
-В примере ниже содержится пример подписки на событие DocumentActivated. Для запуска связанной с обработчиком события процедуры (вывода модального окна) создайте или переключитесь на новый чертеж в nanoCAD 
+В примере ниже содержится пример подписки на событие DocumentActivated. Для запуска связанной с обработчиком события процедуры (вывода модального окна) создайте или переключитесь на новый чертеж в AutoCAD 
 
 ```cs
 using Autodesk.AutoCAD.Runtime;

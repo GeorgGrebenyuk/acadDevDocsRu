@@ -12,10 +12,10 @@
 * LispCancelled : Событие, возникающее при прерывании выполнения lisp выражения в документе. Соответствует функции ObjectARX API AcEditorReactor.lispCancelled(); 
 * LispEnded : Событие, возникающее при прерывании выполнения lisp выражения в документе. Соответствует функции ObjectARX API AcEditorReactor.lispEnded(); 
 * LispWillStart : Событие, возникающее перед началом выполнения lisp выражения в документе. Соответствует функции ObjectARX API AcEditorReactor.lispWillStart(); 
-* UnknownCommand : Событие, возникающее при вызове команды, которую nanoCAD не распознает. Соответствует функции ObjectARX API AcEditorReactor.unknownCommand(); 
+* UnknownCommand : Событие, возникающее при вызове команды, которую AutoCAD не распознает. Соответствует функции ObjectARX API AcEditorReactor.unknownCommand(); 
 * ViewChanged : Событие возникает, когда параметры текущего вида были изменены; 
 
-<b>Примечание</b>: в nanoCAD .NET API не реализованы события BeginDwgOpen, CommandEnded, EndDwgOpen, LayoutSwitched.
+**Примечание**: в nanoCAD .NET API не реализованы события BeginDwgOpen, CommandEnded, EndDwgOpen, LayoutSwitched.
 
 Пример ниже содержит код, подписывающийся на событие закрытия документа. Перед закрытием будет выведено диалоговое окно, при выборе в окне команды "No" закрытие документа будет прекращено. 
 
