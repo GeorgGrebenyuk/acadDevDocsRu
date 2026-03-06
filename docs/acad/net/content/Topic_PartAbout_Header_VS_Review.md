@@ -1,3 +1,5 @@
+# О Visual Studio\, взаимодействие с другим API
+
 В данной статье приведена информация о совместимости отдельных версий Microsoft Visual Studio (MS VS далее) с соответствующими версиями AUtoCAD .NET API. MS VS может взаимодействовать одновременно с .NET API и COM (ActiveX) API. 
 
 | Версия AutoCAD | Release-num | Поддерживаемые версии SDK                              | Версия .NET |
