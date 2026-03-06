@@ -1,4 +1,4 @@
-# Руководство .NET API разработчика
+# Руководство разработчика AutoCAD .NET API
 
 Настоящее руководство является вольным переводом на русский язык справочника `arxmgd_dev.chm` , он же "Managed .NET Developer's Guide (.NET)" из состава AutoCAD SDK.
 
@@ -8,4 +8,4 @@
 
 В некоторых статьях приводятся примечания, на что обратить внимание при разработке приложения также под nanoCAD - что там реализовано иначе.
 
-Исходные материалы настоящего руководства расположены в https://github.com/GeorgGrebenyuk/acadDevDocsRu .
+Исходные материалы настоящего руководства расположены в https://github.com/GeorgGrebenyuk/acadDevDocsRu/tree/main/docs/acad/net.
