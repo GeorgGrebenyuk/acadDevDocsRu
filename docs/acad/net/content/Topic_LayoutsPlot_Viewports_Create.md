@@ -6,20 +6,20 @@
 
 ## Создание ВЭ
 
-В примере ниже приводится код, делающий активым область листов, создающий там плавающий ВЭ, задающий вид для данного ВЭ и делающий данный ВЭ активным. Установка ВЭ активным делается с помощью обращения к NRX-методу ncedSetCurrentVPort из "NrxHostGate.dll", для которого прописывается соответствующая точка входа EntryPoint. 
+В примере ниже приводится код, делающий активым область листов, создающий там плавающий ВЭ, задающий вид для данного ВЭ и делающий данный ВЭ активным. Установка ВЭ активным делается с помощью обращения к ARX-методу acedSetCurrentVPort, для которого прописывается соответствующая точка входа EntryPoint. 
 
 ```cs
 using System.Runtime.InteropServices;
- 
+
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
- 
+
 [DllImport("acad.exe", CallingConvention = CallingConvention.Cdecl,
  EntryPoint = "?acedSetCurrentVPort@@YA?AW4ErrorStatus@Acad@@PBVAcDbViewport@@@Z")]
 extern static private int acedSetCurrentVPort(IntPtr AcDbVport);
- 
+
 [CommandMethod("CreateFloatingViewport")]
 public static void CreateFloatingViewport()
 {
@@ -89,57 +89,57 @@ extern static private int acedSetCurrentVPort(System.IntPtr AcDbVport);
 
 ```cs
 using System.Runtime.InteropServices;
- 
+
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
- 
+
 [DllImport("acad.exe", CallingConvention = CallingConvention.Cdecl,
  EntryPoint = "?acedSetCurrentVPort@@YA?AW4ErrorStatus@Acad@@PBVAcDbViewport@@@Z")]
 extern static private int acedSetCurrentVPort(IntPtr AcDbVport);
- 
+
 [CommandMethod("FourFloatingViewports")]
 public static void FourFloatingViewports()
 {
   // Get the current document and database, and start a transaction
   Document acDoc = Application.DocumentManager.MdiActiveDocument;
   Database acCurDb = acDoc.Database;
- 
+
   using (Transaction acTrans = acCurDb.TransactionManager.StartTransaction())
   {
       // Open the Block table for read
       BlockTable acBlkTbl;
       acBlkTbl = acTrans.GetObject(acCurDb.BlockTableId,
                                    OpenMode.ForRead) as BlockTable;
- 
+
       // Open the Block table record Paper space for write
       BlockTableRecord acBlkTblRec;
       acBlkTblRec = acTrans.GetObject(acBlkTbl[BlockTableRecord.PaperSpace],
                                       OpenMode.ForWrite) as BlockTableRecord;
- 
+
       // Switch to the previous Paper space layout
       Application.SetSystemVariable("TILEMODE", 0);
       acDoc.Editor.SwitchToPaperSpace();
- 
+
       Point3dCollection acPt3dCol = new Point3dCollection();
       acPt3dCol.Add(new Point3d(2.5, 5.5, 0));
       acPt3dCol.Add(new Point3d(2.5, 2.5, 0));
       acPt3dCol.Add(new Point3d(5.5, 5.5, 0));
       acPt3dCol.Add(new Point3d(5.5, 2.5, 0));
- 
+
       Vector3dCollection acVec3dCol = new Vector3dCollection();
       acVec3dCol.Add(new Vector3d(0, 0, 1));
       acVec3dCol.Add(new Vector3d(0, 1, 0));
       acVec3dCol.Add(new Vector3d(1, 0, 0));
       acVec3dCol.Add(new Vector3d(1, 1, 1));
- 
+
       double dWidth = 2.5;
       double dHeight = 2.5;
- 
+
       Viewport acVportLast = null;
       int nCnt = 0;
- 
+
       foreach (Point3d acPt3d in acPt3dCol)
       {
           using (Viewport acVport = new Viewport())
@@ -165,16 +165,16 @@ public static void FourFloatingViewports()
               nCnt = nCnt + 1;
           }
       }
- 
+
       if (acVportLast != null)
       {
           // Activate model space in the viewport
           acDoc.Editor.SwitchToModelSpace();
- 
+
           // Set the new viewport current via an imported ObjectARX function
           acedSetCurrentVPort(acVportLast.UnmanagedObject);
       }
- 
+
       // Save the new objects to the database
       acTrans.Commit();
   }
@@ -187,16 +187,16 @@ public static void FourFloatingViewports()
 
 ```cs
 using System.Runtime.InteropServices;
- 
+
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
- 
+
 [DllImport("acad.exe", CallingConvention = CallingConvention.Cdecl,
  EntryPoint = "?acedSetCurrentVPort@@YA?AW4ErrorStatus@Acad@@PBVAcDbViewport@@@Z")]
 extern static private int acedSetCurrentVPort(IntPtr AcDbVport);
- 
+
 [CommandMethod("CreateNonRectangularFloatingViewport")]
 public static void CreateNonRectangularFloatingViewport()
 {

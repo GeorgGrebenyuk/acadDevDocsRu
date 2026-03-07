@@ -5,8 +5,10 @@
 Для использования метода `Open` вам, также как и для транзакций, необходимо получить идентификатор объекта ObjectId. Как и в методе GetObject, используемом с транзакциями, вам нужно указать режим открытия и осуществить приведение возвращаемого объекта DBObject к целевому типу. 
 
 Если вы внесли изменения в объект после того, как открыли его с помощью метода Open, вы можете использовать метод `Cancel` для отката всех изменений, сделанных с момента открытия объекта. `Cancel` следует вызывать для каждого объекта, в котором вы хотите сделать откат. После закрытия объекта также обязательно надо освободить от них память с помощью метода `Dispose`, либо вы можете использовать оператор `using` для закрытия и освобождение памяти от объекта. 
+
 **Примечание**: Открытые объекты должны быть закрыты. Если вы используете метод `Open` без оператора Using, то для открытого объекта необходимо вызвать метод `Close` или `Cancel`. Если не закрыть объект, это приведет к нарушению доступа объекта для чтения и дальнейшей нестабильной работе приложения. Если вам нужно работать с одним объектом, использование методов `Open` и `Close` может сократить количество строк кода, которые в противном случае пришлось бы писать, по сравнению с работой с менеджером транзакций. Тем не менее, использование транзакций предпочтительнее для открытия и закрытия объектов. 
-**Важно**: При использовании транзакций не следует использовать методы `Open` и `Close`, так как объекты могут открыться и/или закрыться менеджером транзакций не корректно, что может привести к нестабильной работе nanoCAD. Вместо этого используйте метод StartOpenCloseTransation для создания объекта OpenCloseTransaction, который позволяет безопасно работать с методами Open и Close. 
+
+**Важно**: При использовании транзакций не следует использовать методы `Open` и `Close`, так как объекты могут открыться и/или закрыться менеджером транзакций не корректно, что может привести к нестабильной работе AutoCAD. Вместо этого используйте метод StartOpenCloseTransation для создания объекта OpenCloseTransaction, который позволяет безопасно работать с методами Open и Close. 
 
 **Примечание**: в AutoCAD и nanoCAD .NET API методы `Open` и `Close` помечены как устаревшие (Obsolete), вместо них рекомендуется использовать транзакции. Тем не менее их использование всё же возможно, но для некоторых случаев они не реализованы -- например, закрытие таблицы объектов в nanoCAD.
 
@@ -18,7 +20,7 @@
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
- 
+
 [CommandMethod("OpenCloseObjectId")]
 public static void OpenCloseObjectId()
 {
@@ -88,7 +90,7 @@ public static void OpenCloseObjectId()
 using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
- 
+
 [CommandMethod("OpenCloseObjectIdWithUsing")]
 public static void OpenCloseObjectIdWithUsing()
 {
@@ -129,7 +131,7 @@ using Autodesk.AutoCAD.Runtime;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.Geometry;
- 
+
 [CommandMethod("AddNewCircleOpenClose")]
 public static void AddNewCircleOpenClose()
 {
