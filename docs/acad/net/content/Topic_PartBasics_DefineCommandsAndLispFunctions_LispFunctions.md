@@ -18,7 +18,7 @@ public static void DisplayFullName(ResultBuffer rbArgs)
 
 ## Получение значений, переданных в LISP-функцию
 
-Используйте цикл foreach для перебора значений, возвращаемых в ResultBuffer функцией AutoLISP. [ResultBuffer](/Topic_CreateAndEditNcObjects_ResultBuffer.md) - это коллекция объектов TypedValue. Свойство TypeCode объекта TypedValue можно использовать для определения типа значения для каждого значения, переданного в функцию AutoLISP. Свойство Value используется для возврата значения объекта TypedValue. Поддерживаются следующие типы данных: 
+Используйте цикл foreach для перебора значений, возвращаемых в ResultBuffer функцией AutoLISP. [ResultBuffer](./Topic_CreateAndEditAcadObjects_ResultBuffer.md) - это коллекция объектов TypedValue. Свойство TypeCode объекта TypedValue можно использовать для определения типа значения для каждого значения, переданного в функцию AutoLISP. Свойство Value используется для возврата значения объекта TypedValue. Поддерживаются следующие типы данных: 
 
 * Boolean или bool 
 
