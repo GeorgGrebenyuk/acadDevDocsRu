@@ -3,9 +3,10 @@
 Получить информацию о слоях документа вы можете путем итеративного перебора таблицы слоев (LayerTable). Пример ниже собирает информацию об именах слоев и выводит её в диалоговое окно. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+
 [CommandMethod("DisplayLayerNames")]
 public static void DisplayLayerNames()
 {

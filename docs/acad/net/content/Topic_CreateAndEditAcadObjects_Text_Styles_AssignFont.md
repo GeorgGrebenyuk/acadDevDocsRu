@@ -23,12 +23,12 @@ public static void UpdateTextFont()
         acTextStyleTblRec = acTrans.GetObject(acCurDb.Textstyle,
                                               OpenMode.ForWrite) as TextStyleTableRecord;
         // Get the current font settings
-        Teigha.GraphicsInterface.FontDescriptor acFont;
+        Autodesk.AutoCAD.GraphicsInterface.FontDescriptor acFont;
         acFont = acTextStyleTblRec.Font;
         // Update the text style's typeface with "PlayBill"
-        Teigha.GraphicsInterface.FontDescriptor acNewFont;
+        Autodesk.AutoCAD.GraphicsInterface.FontDescriptor acNewFont;
         acNewFont = new
-          Teigha.GraphicsInterface.FontDescriptor("Calibri",
+          Autodesk.AutoCAD.GraphicsInterface.FontDescriptor("Calibri",
                                                             acFont.Bold,
                                                             acFont.Italic,
                                                             acFont.CharacterSet,

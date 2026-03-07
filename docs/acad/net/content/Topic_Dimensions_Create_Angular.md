@@ -25,10 +25,11 @@
 В примере ниже создается угловой размер в пространстве модели 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("CreateAngularDimension")]
 public static void CreateAngularDimension()
 {

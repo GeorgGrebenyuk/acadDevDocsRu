@@ -25,7 +25,7 @@ public void InitBoundary()
         acBlkTblRec = acTrans.GetObject(acBlkTbl[BlockTableRecord.ModelSpace],
                                         OpenMode.ForWrite) as BlockTableRecord;
         var point = acDoc.Editor.GetPoint("Укажите точку внутри контура");
-        if (point.Status != HostMgd.EditorInput.PromptStatus.OK) return;
+        if (point.Status != Autodesk.AutoCAD.EditorInput.PromptStatus.OK) return;
         var plines = acDoc.Editor.TraceBoundary(point.Value, false);
         if (plines == null || plines.Count \< 1) return;
         foreach (DBObject createdPline in plines)

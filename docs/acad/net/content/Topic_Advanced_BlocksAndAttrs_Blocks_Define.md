@@ -7,10 +7,11 @@
 В примере ниже создается новое определение блока с именем "CircleBlock", если оно ещё не существует, в определение блока добавляется окружность. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("CreatingABlock")]
 public void CreatingABlock()
 {

@@ -37,7 +37,7 @@ public void ErrorTryCatchFinally()
             acDb.ReadDwgFile("c:\\Drawing123.dwg",
                              System.IO.FileShare.None, false, "");
         }
-        catch (Teigha.Runtime.Exception Ex)
+        catch (Autodesk.AutoCAD.Runtime.Exception Ex)
         {
             Application.ShowAlertDialog("The following exception was caught:\\n" +
                                         Ex.Message);

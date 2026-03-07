@@ -5,10 +5,11 @@
 В примере ниже создаются 2 трехмерные полилинии, первая полилиния -- классическая плоская полилиния на фиксированной отметке (описывается классом Polyline), вторая -- трехмерная полилиния (описывается классом Polyline3d). После создания объектов показывается механизм чтения координат созданных полилиний, информация о количество точек выводится в диалоговые окна. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("Polyline_2D_3D")]
 public static void Polyline_2D_3D()
 {

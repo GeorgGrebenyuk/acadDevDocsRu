@@ -5,10 +5,11 @@
 Код ниже запрашивает у Пользователя 2 разные группы объектов, а потом объединяет объекты групп в единый набор выбора ObjectIdCollection. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using HostMgd.EditorInput;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.EditorInput;
+
 [CommandMethod("MergeSelectionSets")]
 public static void MergeSelectionSets()
 {

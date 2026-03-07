@@ -7,10 +7,11 @@
 В примере ниже создается солид в виде параллепипеда, и далее он вращается на 30 градусов вокруг вектора, заданного двумя точками. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("Rotate_3DBox")]
 public static void Rotate_3DBox()
 {

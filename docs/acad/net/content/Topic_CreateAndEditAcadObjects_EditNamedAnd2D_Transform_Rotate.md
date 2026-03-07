@@ -11,10 +11,11 @@
 Код ниже поворачивает плоскую полилинию на угол 45 градусов вокруг точки (4, 4.25, 0). 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("RotateObject")]
 public static void RotateObject()
 {

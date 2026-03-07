@@ -61,7 +61,7 @@ public class Loader
             int nCnt = 0;
             foreach (TypedValue rb in rbArgs)
             {
-                if (rb.TypeCode == (int)HostMgd.Runtime.LispDataType.Text)
+                if (rb.TypeCode == (int)Autodesk.AutoCAD.Runtime.LispDataType.Text)
                 {
                     switch (nCnt)
                     {

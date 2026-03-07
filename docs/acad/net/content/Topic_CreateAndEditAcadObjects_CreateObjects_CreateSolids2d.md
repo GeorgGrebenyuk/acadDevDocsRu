@@ -9,10 +9,11 @@
 Пример ниже формирует четырёхугольное тело (фигуру типа "галстук-бабочка") по опорным координатам (0, 0, 0), (5, 0, 0), (5, 8, 0), (0, 8, 0). Также создается заполнение в прямоугольнике, ограниченном координатами (10, 0, 0), (15, 0, 0), (10, 8, 0), (15, 8, 0). 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("Add2DSolid")]
 public static void Add2DSolid()
 {

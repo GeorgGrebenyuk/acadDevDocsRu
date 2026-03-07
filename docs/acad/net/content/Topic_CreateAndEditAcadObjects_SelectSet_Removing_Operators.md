@@ -81,10 +81,11 @@ acTypValAr[1] = new TypedValue((int)DxfCode.Start, "TEXT, MTEXT");
 Можно записать это же условие с помощью операторов: 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using HostMgd.EditorInput;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.EditorInput;
+
 [CommandMethod("FilterForText")]
 public static void FilterForText()
 {

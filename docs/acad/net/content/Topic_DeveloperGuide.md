@@ -8,4 +8,4 @@
 
 В некоторых статьях приводятся примечания, на что обратить внимание при разработке приложения также под nanoCAD - что там реализовано иначе.
 
-Исходные материалы настоящего руководства расположены в https://github.com/GeorgGrebenyuk/acadDevDocsRu/tree/main/docs/acad/net.
+Исходные материалы настоящего руководства расположены в https://github.com/GeorgGrebenyuk/acadDevDocsRu/tree/main/docs/acad/net

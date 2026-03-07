@@ -15,9 +15,9 @@ objId = db.AttachXref(strFName, "drawing1");
 Для получения объектов в пространстве модели (или любого из листов) необходимо обратиться получить запись таблицы блоков (BlockTableRecord) для целевого пространства и пройтись по ней в цикле. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
 
 [CommandMethod("ListEntities")]
 public static void ListEntities()

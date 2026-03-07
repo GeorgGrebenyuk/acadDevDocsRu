@@ -7,9 +7,10 @@
 В примере ниже удаляется слой "ABC", если он имеется в чертеже. Транзакция закрывается в теле функции, поскольку ожидается удаление только одного объекта. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+
 [CommandMethod("EraseLayer")]
 public static void EraseLayer()
 {
@@ -42,7 +43,7 @@ public static void EraseLayer()
                     // Save the changes and dispose of the transaction
                     acTrans.Commit();
                 }
-                catch (Teigha.Runtime.Exception Ex)
+                catch (Autodesk.AutoCAD.Runtime.Exception Ex)
                 {
                     // Layer could not be deleted
                     Application.ShowAlertDialog("Error:\\n" + Ex.Message);

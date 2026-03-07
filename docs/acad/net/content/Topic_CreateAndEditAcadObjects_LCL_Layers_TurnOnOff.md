@@ -7,10 +7,11 @@
 Пример ниже содержит создание нового слоя "ABC" и его отключение, затем создание окружности на данном слое, которую не будет видно, пока слой не будет вновь включен. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("TurnLayerOff")]
 public static void TurnLayerOff()
 {

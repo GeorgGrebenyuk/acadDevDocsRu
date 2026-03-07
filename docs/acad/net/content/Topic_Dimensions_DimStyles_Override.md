@@ -55,11 +55,12 @@
 В примере ниже редактируется формат отображения линейных размеров, добавляется суффикс, равный значению, которое пользователь введёт из строки (обработка с помощью Editor.GetString) 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
-using HostMgd.EditorInput;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+using Autodesk.AutoCAD.EditorInput;
+
 [CommandMethod("AddDimensionTextSuffix")]
 public static void AddDimensionTextSuffix()
 {

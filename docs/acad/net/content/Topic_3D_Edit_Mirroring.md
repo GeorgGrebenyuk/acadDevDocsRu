@@ -6,10 +6,11 @@
 В примере ниже создается солид в виде параллепипеда, затем создается его зеркальная копия, для контраста, красного цвета. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("MirrorABox3D")]
 public static void MirrorABox3D()
 {

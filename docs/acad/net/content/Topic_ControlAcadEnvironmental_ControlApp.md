@@ -1,6 +1,7 @@
 # Взаимодействие с окном приложения AutoCAD
 
 Иногда исполняемому приложению бывает необходимо свернуть окно AutoCAD или запросить его состояние. Для этого используются методы статического класса Application. С их помощью можно изменять положение, размер и видимость окна приложения, также можно использовать свойство WindowState для получения и задания текущего состояния окна приложения. 
+
 **Примечание**: Следующие примеры требуют наличия в проекте ссылки на библиотеку PresentationCore (PresentationCore.dll). Воспользуйтесь диалоговым окном Add Reference и выберите PresentationCore на вкладке .NET (при использовании .NET Framework). При использовании .NET6 в свойствах проекта csproj внесите строку UseWPF = True. Некоторые примеры также требуют ссылки на библиотеки WindowsForms, добавьте в проект на .NET6+ UseWindowsForms = True. 
 
 ```xml
@@ -13,12 +14,15 @@
 
 ## Установка положения и размера окна приложения
 
-Свойства Application.MainWindow.DeviceIndependentLocation, Application.MainWindow.DeviceIndependentSize в текущей версии .NET API не доступны для редактирования (в отличие от AutoCAD .NET API). ##  Разворачивание на полный экран и свертывание приложения  
+Свойства Application.MainWindow.DeviceIndependentLocation, Application.MainWindow.DeviceIndependentSize в текущей версии .NET API не доступны для редактирования (в отличие от AutoCAD .NET API). 
+
+## Разворачивание на полный экран и свертывание приложения
 
 ```cs
-using HostMgd.Windows;
-using HostMgd.ApplicationServices;
-using Teigha.Runtime;
+using Autodesk.AutoCAD.Windows;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.Runtime;
+
 [CommandMethod("MinMaxApplicationWindow")]
 public static void MinMaxApplicationWindow()
 {

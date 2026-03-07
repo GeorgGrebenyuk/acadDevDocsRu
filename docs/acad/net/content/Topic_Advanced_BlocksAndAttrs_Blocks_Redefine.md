@@ -7,10 +7,11 @@
 В примере ниже, если в чертеже есть определение блока с именем "CircleBlock", то для всех объектов-окружностей, составляющих блок, увеличивается радиус в 2 раза, после чего с помощью служебного метода RecordGraphicsModified обновляются все вхождения блока, чтобы они изменились вслед за редактированием определения. 
 
 ```cs
-using Teigha.Runtime;
-using HostMgd.ApplicationServices;
-using Teigha.DatabaseServices;
-using Teigha.Geometry;
+using Autodesk.AutoCAD.Runtime;
+using Autodesk.AutoCAD.ApplicationServices;
+using Autodesk.AutoCAD.DatabaseServices;
+using Autodesk.AutoCAD.Geometry;
+
 [CommandMethod("RedefiningABlock")]
 public void RedefiningABlock()
 {
