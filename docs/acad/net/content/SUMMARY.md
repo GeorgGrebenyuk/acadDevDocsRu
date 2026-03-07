@@ -193,6 +193,7 @@
       - [Каркасные объекты](./Topic_3D_CreateObjects_Wireframe.md)
       - [Полигональные сети](./Topic_3D_CreateObjects_Meshes.md)
       - [Многогранные сети](./Topic_3D_CreateObjects_PolyfaceMesh.md)
+      - [Сети SubDMesh и грани Face](./Topic_3D_CreateObjects_SubDMesh.md)
       - [Трёхмерные тела](./Topic_3D_CreateObjects_Solid3d.md)
     - [Редактирование в 3D](./Topic_3D_Edit.md)
       - [Вращение в 3D](./Topic_3D_Edit_Rotate.md)
