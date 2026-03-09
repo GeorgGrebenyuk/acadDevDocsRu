@@ -2,15 +2,15 @@
 
 Существует 2 механизма хранения произвольных данных у объекта - с помощью `Xrecord` и `XData`. Принципиальное отличие вариантов в объеме хранимых данных. Если XRecord имеет лимит до 2 Гб данных, то XData ограничено 16 Кб.
 
-XData само по себе не является классом или структурой, это лишь название свойства, значением которого выступает [ResultBuffer](/Topic_CreateAndEditAcadObjects_ResultBuffer.md). Свойство `XData` имеют все объекты, унаследованные от `DBObject` и именно данные в нём имеют ограничение на 16 Кб. Xrecord кстати тоже имеет свойство Xdata, и там такого ограничения нет (т.к. свойство XData у DBObject имеет модификатор `virtual`, что означает, что оно переопределено у Xrecord).
+XData само по себе не является классом или структурой, это лишь название свойства, значением которого выступает [ResultBuffer](./Topic_CreateAndEditAcadObjects_ResultBuffer.md). Свойство `XData` имеют все объекты, унаследованные от `DBObject` и именно данные в нём имеют ограничение на 16 Кб. Xrecord кстати тоже имеет свойство Xdata, и там такого ограничения нет (т.к. свойство XData у DBObject имеет модификатор `virtual`, что означает, что оно переопределено у Xrecord).
 
-Xrecord хранятся в [словарях](./Topic_Advanced_Dictionry.md), а словари хранятся как при объектах, также унаследованные от `DBObject` (идентификатор словаря в значении свойства `ExtensionDictionary`), так и на уровне базы данных. 
+Xrecord хранятся в [словарях](./Topic_Advanced_Dictionary.md), а словари хранятся как при объектах, также унаследованные от `DBObject` (идентификатор словаря в значении свойства `ExtensionDictionary`), так и на уровне базы данных. 
 
-И XRecord и XData апеллириют набором данных, представленных в виде [ResultBuffer](/Topic_CreateAndEditAcadObjects_ResultBuffer.md). Для того, чтобы сохранить некоторую информацию в [ResultBuffer](/Topic_CreateAndEditAcadObjects_ResultBuffer.md), в чертеже должно быть зарегистрировано приложение (иметься запись `RegAppTableRecord`), для которого можно сохранить перечень данных разного типа, в отличие от стандартных DxfCode.
+И XRecord и XData апеллириют набором данных, представленных в виде [ResultBuffer](./Topic_CreateAndEditAcadObjects_ResultBuffer.md). Для того, чтобы сохранить некоторую информацию в [ResultBuffer](./Topic_CreateAndEditAcadObjects_ResultBuffer.md), в чертеже должно быть зарегистрировано приложение (иметься запись `RegAppTableRecord`), для которого можно сохранить перечень данных разного типа, в отличие от стандартных DxfCode.
 
 В примере ниже получается набор объектов из пользовательского выбора, и в свойство XData каждого из объектов добавляется ResultBuffer из пары значений -- имени приложения и некоторой текстовой строки (или иного типа данных для ResultBuffer, см. [соответствующую статью](./Topic_CreateAndEditAcadObjects_ResultBuffer.md).
 
-Пример работы с XRecord в составе словарей см. в [статье про словари](./Topic_Advanced_Dictionry.md).
+Пример работы с XRecord в составе словарей см. в [статье про словари](./Topic_Advanced_Dictionary.md).
 
 ```cs
 using Autodesk.AutoCAD.Runtime;
