@@ -1,8 +1,10 @@
 # О типе данных ResultBuffer
 
-Тип ResultBuffer — это класс, который отражает структуру `resbuf`, определенную в ObjectARX. Структура `resbuf` предоставляет собой контейнер для данных, специфичных для AutoCAD. 
+ResultBuffer — это класс, который отражает структуру `resbuf`, определенную в ObjectARX. Структура `resbuf` предоставляет собой контейнер для данных, специфичных для AutoCAD. 
 
 Объект класса Autodesk.AutoCAD.DatabaseServices.ResultBuffer используется практически так же, как и нативный `resbuf`. Вы определяете ResultBuffer и заполняете его последовательностью пар данных. Каждая пара содержит описание типа данных и значение. В управляемом .NET API эти пары данных являются экземплярами класса `Autodesk.AutoCAD.DatabaseServices.TypedValue`. Этот служебный класс выполняет ту же функцию, что и члены `restype` и `resval` структуры `resbuf`. 
+
+ResultBuffer используется в [Xrecord и XData](./Topic_Advanced_XData.md).
 
 Свойство `TypedValue.TypeCode` представляет собой 16-разрядное целое значение, которое указывает на тип данных свойства `TypedValue.Value`. Допустимые значения TypeCode зависят от конкретного использования экземпляра ResultBuffer. Например, значения TypeCode, подходящие для определения XRecord, не обязательно подходят для xdata. Перечисление `Autodesk.AutoCAD.DatabaseServices.DxfCode` определяет коды, которые описывают весь диапазон возможных типов данных ResultBuffer. 
 
