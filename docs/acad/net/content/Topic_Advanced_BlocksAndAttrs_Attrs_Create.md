@@ -68,7 +68,7 @@ public void AddingAttributeToABlock()
                         acAttDef.TextString = "DXX";
                         acAttDef.Height = 1;
                         acAttDef.Justify = AttachmentPoint.MiddleCenter;
-
+                        //Тут может возникнуть ошибка, см. примечание внизу
                         acBlkTblRec.AppendEntity(acAttDef);
 
                         acTrans.GetObject(acCurDb.BlockTableId, OpenMode.ForWrite);
@@ -86,6 +86,8 @@ public void AddingAttributeToABlock()
     }
 }
 ```
+
+**Примечание**: в AutoCAD (2022) .NET API замечено, в некоторых случаях, если одновременно в теле using создания BlockTableRecord выполняется и добавление определений атрибутов, то AutoCAD может выбросить ошибку доступа в память и вылетать с фатальной ошибкой. Решение -- в теле using только создать блок без атрибутов, а после using-конструкции получить созданный BlockTableRecord на запись и добавить в него атрибуты. В nanoCAD .NET API таких проблем не встречалось.
 
 ## Вставка блока с атрибутами
 
