@@ -1,0 +1,12 @@
+[book]
+authors = ["GeorgGrebenyuk"]
+language = "ru"
+multilingual = false
+src = "content"
+title = "Руководство разработчика Renga COM API"
+
+[output.html]
+no-section-label = true
+
+[output.html.print]
+enable = true

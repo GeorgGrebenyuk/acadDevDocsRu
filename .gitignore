@@ -2,3 +2,9 @@
 
 *.pdf
 acadDevDocsRu_Web.lnk
+
+#local projects, for check api
+samples
+
+#local cache for Obsidian
+.obsidian
