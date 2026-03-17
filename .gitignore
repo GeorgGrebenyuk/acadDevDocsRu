@@ -1,10 +1,16 @@
 #docs data
 
 *.pdf
-acadDevDocsRu_Web.lnk
+*.lnk
 
 #local projects, for check api
 samples
+code
+
 
 #local cache for Obsidian
 .obsidian
+
+# local cashe from PyCharm
+*.idea
+
