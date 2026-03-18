@@ -1,6 +1,6 @@
 # acadDevDocsRu
 
-Справочные руководства по разработке приложений под AutoCAD и вертикальные приложения для разном API на русском языке
+Справочные руководства по разработке приложений под различные САПР на русском языке
 
 ## Принцип описаний
 
@@ -16,8 +16,9 @@ HTML-результат сборки в `mdBook` складываю сюда htt
 
 ## Перечень справочников
 
-| Имя справочника                           | Относительный путь | Содержание                                  | Описание                                                 | PDF                     | WEB
-| ----------------------------------------- | ------------------ | ------------------------------------------- | -------------------------------------------------------- | ----------------------- | -----
-| Руководство AutoCAD .NET API разработчика | `\docs\acad\net`   | [Click](./docs/acad/net/content/SUMMARY.md) | [Click](./docs/acad/net/content/Topic_DeveloperGuide.md) | acadNetDeveloperGuideRu | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/acadNetDeveloperGuideRu/) |
+| Имя справочника                           | Относительный путь | Содержание                                   | Описание                                                 | PDF | WEB                                                                                  |
+| ----------------------------------------- | ------------------ | -------------------------------------------- | -------------------------------------------------------- | --- | ------------------------------------------------------------------------------------ |
+| Руководство AutoCAD .NET API разработчика | `\docs\acad\net`   | [Click](./docs/acad/net/content/SUMMARY.md)  | [Click](./docs/acad/net/content/Topic_DeveloperGuide.md) |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/acadNetDeveloperGuideRu/) |
+| Руководство разработчика Renga COM API    | `\docs\renga\com`  | [Click](./docs/renga/com/content/SUMMARY.md) | [Click](./docs/renga/com/content/Topic_RengaDevGuide.md) |     |                                                                                      |
 
 ### 
