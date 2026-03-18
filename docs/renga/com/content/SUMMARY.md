@@ -13,14 +13,15 @@
 			- [Работа с камерой](Topic_RengaDevGuide_AppProcessing_View_Camera.md)
 			- [Создание скриншотов сцены](Topic_RengaDevGuide_AppProcessing_View_Screens.md)
 			- [Управление видимостью объектов](Topic_RengaDevGuide_AppProcessing_View_Visibility.md)
-		- Работа с выборкой объектов
-	- Взаимодействие с проектом Renga
-		- Свойства проекта
-			- Информация о здании
-			- Информация об участке
-			- Информация о проекте
-			- Прочие свойства
-		- Стили
+		- [Работа с выборкой объектов](Topic_RengaDevGuide_AppProcessing_Selection.md)
+			- [Событие выбора](Topic_RengaDevGuide_AppProcessing_Selection_Event.md)
+	- [Взаимодействие с проектом Renga](Topic_RengaDevGuide_ProjectProcessing.md)
+		- [Свойства проекта](Topic_RengaDevGuide_ProjectProcessing_RootProps.md)
+			- [Информация о здании](Topic_RengaDevGuide_ProjectProcessing_RootProps_Building.md)
+			- [Информация об участке](Topic_RengaDevGuide_ProjectProcessing_RootProps_Land.md)
+			- [Информация о проекте](Topic_RengaDevGuide_ProjectProcessing_RootProps_Project.md)
+		- [Прочие свойства](Topic_RengaDevGuide_ProjectProcessing_OtherProps.md)
+		- [Стили](Topic_RengaDevGuide_ProjectProcessing_Styles.md)
 			- Создание стилей
 			- Чтение стилей
 		- Свойства
