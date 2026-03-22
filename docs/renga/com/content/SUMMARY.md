@@ -1,4 +1,4 @@
-# Summary
+# Оглавление
 
 - [Руководство разработчика Renga](Topic_RengaDevGuide.md)
 	- [Общие сведения](Topic_RengaDevGuide_Common.md)
@@ -21,13 +21,17 @@
 			- [Информация об участке](Topic_RengaDevGuide_ProjectProcessing_RootProps_Land.md)
 			- [Информация о проекте](Topic_RengaDevGuide_ProjectProcessing_RootProps_Project.md)
 		- [Прочие свойства](Topic_RengaDevGuide_ProjectProcessing_OtherProps.md)
+		- [Категории](Topic_RengaDevGuide_ProjectProcessing_Categories.md)
 		- [Стили](Topic_RengaDevGuide_ProjectProcessing_Styles.md)
-			- Создание стилей
-			- Чтение стилей
-		- Свойства
-			- Считывание и редактирование свойств
-			- Создание новых определений свойств
-			- Создание и редактирование свойств типа Перечисление
+			- [Создание стилей](Topic_RengaDevGuide_ProjectProcessing_Styles_Creation.md)
+			- [Чтение стилей](Topic_RengaDevGuide_ProjectProcessing_Styles_Reading.md)
+		- [Работа со свойствами](Topic_RengaDevGuide_ProjectProcessing_Props0.md)
+			- [Обычные свойства](Topic_RengaDevGuide_ProjectProcessing_Props0_General.md)
+				- [Создание новых определений свойств](Topic_RengaDevGuide_ProjectProcessing_Props0_General_Creation.md)
+				- Считывание и редактирование определений свойств
+				- Создание и редактирование определений свойств типа Перечисление
+			- Расчетные свойства
+			- Параметры
 		- Работа с моделью
 			- Графические объекты
 				- Чтение информации об объектах
@@ -40,11 +44,12 @@
 						- Чтение геометрии
 						- Преобразование в иные представления
 				- Создание объектов модели
-					- Создание объектов через базовую линию;
-					- Создание точечных объектов;
+					- Создание объектов через базовую линию
+					- Создание точечных объектов
 				- Чтение и редактирование образующей геометрии
 					- Базовые линии
 					- Точечные объекты
+				- Редактирование стиля объекта
 			- Анотативные объекты
 				- Текстовые объекты
 					- Особенности вставки текста

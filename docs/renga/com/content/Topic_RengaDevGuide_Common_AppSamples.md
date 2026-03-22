@@ -23,4 +23,5 @@
 ### C\#
 - [Renga Bri4ka](https://github.com/Lex-is-BIM/renga_bri4ka) - набор различных плагинов;
 - [VinnyRengaAdapter](https://github.com/Vinny-Environment/VinnyRengaAdapter) - экспорт объектов в обменные форматы;
+- [RengaInspector](https://github.com/karpovichpv/RengaInspector) - оконный обозреватель проекта и объектов (свойств и методов по API);
 TODO
