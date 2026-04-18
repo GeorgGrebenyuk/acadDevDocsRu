@@ -18,12 +18,13 @@ HTML-результат сборки в `mdBook` складываю сюда htt
 
 ## Перечень справочников
 
-| Имя справочника                                    | Относительный путь  | Содержание                                     | Описание                                                    | PDF | WEB                                                                                  |
-| -------------------------------------------------- | ------------------- | ---------------------------------------------- | ----------------------------------------------------------- | --- | ------------------------------------------------------------------------------------ |
-| Autodesk                                           |                     |                                                |                                                             |     |                                                                                      |
-| Руководство AutoCAD .NET API разработчика          | `\docs\acad\net`    | [Click](./docs/acad/net/content/SUMMARY.md)    | [Click](./docs/acad/net/content/Topic_DeveloperGuide.md)    |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/acadNetDeveloperGuideRu/) |
-| Руководство разработчика AutoCAD Civil 3D .NET API | `\docs\civil3d\net` | [Click](./docs/civil3d/net/content/SUMMARY.md) | [Click](./docs/civil3d/net/content/Topic_DeveloperGuide.md) |     |                                                                                      |
-| **Российское**                                     |                     |                                                |                                                             |     |                                                                                      |
-| Руководство разработчика Renga COM API             | `\docs\renga\com`   | [Click](./docs/renga/com/content/SUMMARY.md)   | [Click](./docs/renga/com/content/Topic_RengaDevGuide.md)    |     |                                                                                      |
+| Имя справочника                                      | Относительный путь  | Содержание                                     | PDF | WEB                                                                                  |
+| ---------------------------------------------------- | ------------------- | ---------------------------------------------- | --- | ------------------------------------------------------------------------------------ |
+| Autodesk                                             |                     |                                                |     |                                                                                      |
+| Руководство AutoCAD .NET API разработчика            | `\docs\acad\net`    | [Click](./docs/acad/net/content/SUMMARY.md)    |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/acadNetDeveloperGuideRu/) |
+| Руководство разработчика AutoCAD Civil 3D .NET API   | `\docs\civil3d\net` | [Click](./docs/civil3d/net/content/SUMMARY.md) |     |                                                                                      |
+| Руководство разработчика Autodesk NavisWorks COM API | `docs\navis\com`    | [Click](./docs/navis/com/content/SUMMARY.md)   |     |                                                                                      |
+| **Российское**                                       |                     |                                                |     |                                                                                      |
+| Руководство разработчика Renga COM API               | `\docs\renga\com`   | [Click](./docs/renga/com/content/SUMMARY.md)   |     |                                                                                      |
 
 ### 
