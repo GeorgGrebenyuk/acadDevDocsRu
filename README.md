@@ -22,9 +22,9 @@ HTML-результат сборки в `mdBook` складываю сюда htt
 | ---------------------------------------------------- | ------------------- | ---------------------------------------------- | --- | ------------------------------------------------------------------------------------ |
 | Autodesk                                             |                     |                                                |     |                                                                                      |
 | Руководство AutoCAD .NET API разработчика            | `\docs\acad\net`    | [Click](./docs/acad/net/content/SUMMARY.md)    |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/acadNetDeveloperGuideRu/) |
-| Руководство разработчика AutoCAD Civil 3D .NET API   | `\docs\civil3d\net` | [Click](./docs/civil3d/net/content/SUMMARY.md) |     |                                                                                      |
-| Руководство разработчика Autodesk NavisWorks COM API | `docs\navis\com`    | [Click](./docs/navis/com/content/SUMMARY.md)   |     |                                                                                      |
+| Руководство разработчика AutoCAD Civil 3D .NET API   | `\docs\civil3d\net` | [Click](./docs/civil3d/net/content/SUMMARY.md) |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/c3dNetDeveloperGuideRu/)                                                                                     |
+| Руководство разработчика Autodesk NavisWorks COM API | `docs\navis\com`    | [Click](./docs/navis/com/content/SUMMARY.md)   |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/navisComDeveloperGuideRu/)                                                                                      |
 | **Российское**                                       |                     |                                                |     |                                                                                      |
-| Руководство разработчика Renga COM API               | `\docs\renga\com`   | [Click](./docs/renga/com/content/SUMMARY.md)   |     |                                                                                      |
+| Руководство разработчика Renga COM API               | `\docs\renga\com`   | [Click](./docs/renga/com/content/SUMMARY.md)   |     | [Click](https://georggrebenyuk.github.io/acadDevDocsRu_Web/rengaCOMDeveloperGuideRu/)                                                                                     |
 
 ### 
