@@ -8,5 +8,9 @@
 	- [Программная работа с Navisworks](Topic_DeveloperGuide_Progs.md)
 		- [Приложение Navisworks](Topic_DeveloperGuide_Progs_App.md)
 		- [Модель (проект) Navisworks](Topic_DeveloperGuide_Progs_State.md)
+			- [О базовых представлениях объектов](Topic_DeveloperGuide_Progs_State_BaseInterfaces.md)
 			- [Работа с загруженными файлами и объектами](Topic_DeveloperGuide_Progs_State_Files.md)
+			- [Прочие инструменты](Topic_DeveloperGuide_Progs_State_Other.md)
+				- [Выборка объектов](Topic_DeveloperGuide_Progs_State_Other_Selection.md)
+				- [Набор выборки объектов](Topic_DeveloperGuide_Progs_State_Other_SelectionSet.md)
   
